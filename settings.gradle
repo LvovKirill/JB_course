@@ -1,0 +1,2 @@
+rootProject.name = "workouttrainingconstruction"
+include ':app'
