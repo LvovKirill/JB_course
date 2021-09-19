@@ -1,32 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@color/white"
+    android:clickable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TrainingFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/purple_500">
 
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:onClick="addTraining"
+    <TextView
+        android:id="@+id/nameTraining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"
-        android:backgroundTint="@color/purple_500"
-        android:src="@drawable/ic_baseline_add_24"
-        app:tint="@color/white"
-        app:borderWidth="1dp"
-        app:elevation="10dp"
-        app:backgroundTint="@color/white"
-        />
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:text="training 1"/>
 
-</RelativeLayout>
+
+</FrameLayout>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="10"
+            android:fadingEdgeLength="2dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Time:"
+                    android:textColor="@color/purple_500" />
+
+                <TextView
+                    android:id="@+id/time_training"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textColor="@color/purple_500"
+                    android:textSize="50dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="10"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Repeat: "
+                    android:textColor="@color/purple_500" />
+
+                <TextView
+                    android:id="@+id/countExercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textColor="@color/purple_500"
+                    android:textSize="50dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </TableRow>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="Details"/>
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:text="add exercise"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="add rest"/>
+        </TableRow>
+
+
+
+</LinearLayout>
